@@ -101,12 +101,14 @@ p {
   line-height: 150%;
   text-align: center;
   letter-spacing: 0.2px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .btn:link,
 .btn:hover,
 .btn:active,
-.btn:visited {
+.btn:visited,
+#early-access input[type="submit"] {
   display: block;
   width: 250px;
   margin: 30px auto 0;
@@ -179,6 +181,103 @@ h2 {
   height: 16px;
   width: auto;
   margin-bottom: -3px;
+}
+
+/* TESTIMONIES STYLING ---- */
+
+#testimonials {
+  padding: 50px 0;
+}
+
+.testimony {
+  background-color: hsl(219, 30%, 18%);
+  width: 75%;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.quote-icon {
+  height: 18px;
+  margin: 0 0 -22px 53px;
+}
+
+blockquote {
+  font-size: 10px;
+  letter-spacing: 0.33px;
+  line-height: 180%;
+  font-family: "Open Sans", sans-serif;
+  padding: 20px;
+  font-weight: 400;
+}
+
+cite {
+}
+cite img {
+  height: 25px;
+  width: auto;
+  border-radius: 100%;
+  float: left;
+  margin-left: 20px;
+}
+
+.user {
+  float: left;
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
+.user-name,
+.user-title {
+  text-align: left;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+.user-title {
+  font-size: 8px;
+}
+
+.user-name {
+  font-weight: 700;
+}
+
+/* EARLY ACCESS STYLING ---- */
+
+#early-access {
+  padding: 70px 0;
+}
+
+#early-access p {
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 30px;
+}
+
+#early-access form {
+  margin: 0 auto;
+  display: block;
+}
+
+#early-access input {
+  display: block;
+  padding: 15px 20px;
+  width: 80%;
+  text-align: left;
+  margin: 20px auto;
+  border-radius: 25px;
+}
+
+#early-access input[type="text"] {
+  font-size: 10px;
+}
+#early-access input[type="text"]::placeholder {
+  color: #ccc;
+}
+
+#early-access input[type="submit"] {
+  font-size: 14px;
+  width: 80%;
+  border: 1px solid transparent;
 }
 
 /* ---------------------- */
