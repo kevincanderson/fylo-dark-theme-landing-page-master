@@ -23,6 +23,7 @@
   padding: 0;
   margin: 0;
   font-size: 14px;
+  font-family: "Raleway", sans-serif;
 }
 
 html {
@@ -30,9 +31,163 @@ html {
   color: hsl(0, 0%, 100%);
 }
 
+.clearfix {
+  overflow: hidden;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header,
+section,
+footer {
+  border: 1px dashed #fff;
+}
+
+/* HEADER STYLING ------ */
+
+header {
+  padding: 20px 20px 0px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  float: left;
+  height: 25px;
+  width: auto;
+}
+nav {
+  float: right;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+nav a,
+nav a:link,
+nav a:hover,
+nav a:active,
+nav a:visited {
+  font-size: 90%;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.hero-box {
+  width: 100%;
+  padding: 75px 15px;
+}
+
+.hero-box img {
+  width: 100%;
+}
+
+h1 {
+  padding: 20px 0;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+}
+
+p {
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.btn:link,
+.btn:hover,
+.btn:active,
+.btn:visited {
+  display: block;
+  width: 250px;
+  margin: 30px auto 0;
+  padding: 15px 80px;
+  background: linear-gradient(135deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.33px;
+}
+
+/* FEATURE STYLING ---- */
+
+#features {
+  padding: 50px 20px 30px;
+  margin: 0 auto;
+}
+
+.feature {
+  margin-bottom: 60px;
+}
+
+.icon {
+  display: block;
+  padding: 10px 10px;
+  margin: 0 auto 10px;
+  width: 80px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 18px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* PRODUCTIVE STYLING ---- */
+
+#productivity {
+  width: 100%;
+  padding: 60px 30px;
+}
+
+#productivity img {
+  width: 100%;
+}
+#productivity h2,
+#productivity p {
+  text-align: left;
+}
+
+#productivity p {
+  margin: 15px 0;
+  line-height: 150%;
+}
+
+#productivity a:link,
+#productivity a:hover,
+#productivity a:active,
+#productivity a:visited {
+  font-size: 90%;
+  text-decoration: none;
+  color: hsl(176, 68%, 64%);
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  padding-bottom: 4px;
+}
+#productivity a img {
+  height: 16px;
+  width: auto;
+  margin-bottom: -3px;
+}
+
 /* ---------------------- */
 /* LAPTOP STYLING ------- */
 /* ---------------------- */
 
 @media only screen and (min-width: 425px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
