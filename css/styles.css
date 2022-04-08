@@ -45,6 +45,11 @@ p {
 	color: hsl(0, 0%, 100%);
 }
 
+a:link,
+a:visited {
+	color: hsl(0, 0%, 100%);
+}
+
 /* * * BUTTON STYLING  * *  */
 
 .btn {
@@ -69,15 +74,21 @@ p {
 	width: 100%;
 }
 
+.main {
+	background: hsl(217, 28%, 15%);
+	z-index: -2;
+}
+
 /* * * HEADER STYLING * *  */
 
 .header {
-	margin: 0.5em 1.5em 0 1.25em;
+	margin: 0em 1.5em 0 1.25em;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0;
+	padding: 0.5rem 0 0 0;
+	z-index: 1;
 }
 
 .logo {
@@ -98,13 +109,30 @@ a {
 /* * * INTRO STYLING * *  */
 
 .intro {
-	margin: 2.25rem 2.25rem 7.5rem;
+	margin: 2.25rem 2.25rem 0;
+	position: relative;
+	z-index: 1;
 }
 
 .intro-img {
 	max-width: 100%;
 	display: block;
 	margin: 0 auto;
+}
+.main::after {
+	position: absolute;
+	content: "";
+	height: 100%;
+	background-image: url(../images/bg-curvy-mobile.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	top: 1rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	/* background-color: hsl(218, 28%, 13%); */
 }
 
 /* * * FEATURES STYLING * *  */
@@ -116,7 +144,8 @@ a {
 		"feature"
 		"feature"
 		"feature";
-	margin: 3.25rem 1.6875rem 7.5rem;
+	margin: 3.25rem 1.6875rem 0;
+	padding-top: 7.5rem;
 	grid-gap: 5rem;
 }
 
@@ -261,6 +290,7 @@ a {
 
 .footer-contact {
 	margin-left: 1.75rem;
+	margin-right: 1.75rem;
 }
 .footer-contact table {
 	margin-left: -1rem;
@@ -289,6 +319,15 @@ a {
 .footer-nav li {
 	display: block;
 	margin-bottom: 1rem;
+}
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.social-icons i {
+	margin: 2rem 0.5rem;
 }
 
 footer {
