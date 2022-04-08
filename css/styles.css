@@ -45,12 +45,6 @@ p {
 	color: hsl(0, 0%, 100%);
 }
 
-.nav-link:hover {
-	font-weight: 700;
-	text-decoration-line: underline;
-	text-decoration-color: hsl(0, 0%, 100%);
-}
-
 /* * * BUTTON STYLING  * *  */
 
 .btn {
@@ -62,6 +56,7 @@ p {
 	box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
 	border-radius: 24px;
 	color: hsl(0, 0%, 100%);
+	border-style: none;
 }
 
 .intro-btn {
@@ -96,6 +91,10 @@ p {
 	margin-left: 1.5rem;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* * * INTRO STYLING * *  */
 
 .intro {
@@ -119,9 +118,6 @@ p {
 		"feature";
 	margin: 3.25rem 1.6875rem 7.5rem;
 	grid-gap: 5rem;
-}
-
-.feature {
 }
 
 .feature-icon {
@@ -224,12 +220,14 @@ p {
 /* * * EARLY ACCESS STYLING * *  */
 
 .early-access {
-	margin: 0 1.25rem;
+	margin: 10rem 1.25rem -11rem;
 	background-color: hsl(217, 28%, 15%);
 	padding: 2.5rem 1.75rem;
 	box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
 	border-radius: 9px;
-	z-index: 10;
+	z-index: 6;
+	max-width: 54rem;
+	transform-style: preserve-3d;
 }
 
 .email-input {
@@ -240,19 +238,67 @@ p {
 	background: #ffffff;
 	box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
 	border-radius: 24px;
+	border-style: none;
+	box-sizing: border-box;
+	padding-left: 1rem;
+	z-index: 6;
 }
 
 /* * * FOOTER STYLING * *  */
 
 .footer {
 	background-color: hsl(216, 53%, 9%);
-	margin-top: -5rem;
+	padding-top: 11rem;
+	padding-bottom: 1rem;
 }
 
-.footer p {
-	margin-top: 10rem;
+.logo-footer {
+	margin-top: 5rem;
+	margin-left: 2.325rem;
+	margin-bottom: 2.125rem;
+	width: 7.5rem;
+}
+
+.footer-contact {
+	margin-left: 1.75rem;
+}
+.footer-contact table {
+	margin-left: -1rem;
+	border-spacing: 1rem;
+	border-collapse: separate;
+}
+.footer-address td {
+	vertical-align: top;
+}
+
+.contact-icon {
+	height: 0.875rem;
+}
+
+.footer-connect {
+	margin-bottom: 2.5rem;
+}
+
+.footer-nav {
+	list-style: none;
+	display: block;
+	padding-inline-start: 0;
+	margin-bottom: 3rem;
+}
+
+.footer-nav li {
+	display: block;
+	margin-bottom: 1rem;
 }
 
 footer {
 	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.nav-link:hover {
+		font-weight: 700;
+		text-decoration-line: underline;
+		text-decoration-color: hsl(0, 0%, 100%);
+	}
 }
