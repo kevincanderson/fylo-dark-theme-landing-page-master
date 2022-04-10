@@ -31,19 +31,154 @@
 html {
     font-size: 16px;
     font-family: var(--body-font);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-}
-
-
-body {
-    background-color: var(--main-bg);
     color: var(--white);
 }
 
+body {
+    background-color: var(--main-bg);
+}
+
+/* ! FONT STYLING */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+   font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.125rem;
+}
+
+p {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn {
+    background: linear-gradient(to right, var(--cyan), var(--blue));
+    border-radius: 1.5rem;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
+    border-style: none;
+    color: var(--white);
+    font-weight: 700;
+}
+
+
+
 .intro {
+    /* background-color: var(--intro-bg); */
+    padding-top: 1.5rem;
+    position: relative;
+}
+
+
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 1.5rem;
+    width: 90%;
+    margin: 0 auto 2rem;
+    z-index: auto;
+}
+
+.header-logo {
+    align-self: middle;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 0.75rem;
+    margin: 0 0.25rem 0 1.25rem;
+}
+
+.intro-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 720px;
+    z-index: 2;
+}
+
+.intro-content::after {
+    position: absolute;
+    content: "";
+    height: 68%;
+    background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 100%;
+    background-image: url(../images/bg-curvy-mobile.svg);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
     background-color: var(--intro-bg);
 }
 
+.intro-graphic {
+    margin: 1rem auto 1rem;
+    z-index: 2;
+}
+
+.intro-heading {
+    margin: 1rem auto 0.5rem;
+    z-index: 2;
+}
+
+.intro-text {
+    margin: 0.5rem auto 1rem;
+    z-index: 2;
+}
+
+.intro-btn {
+    margin: 1rem auto 0;
+    padding: 1rem 5.0625rem;
+    z-index: 2;
+
+}
+
+.intro-graphic,
+.productive-graphic {
+    max-width: 100%;
+}
+
+.features {
+    align-items:end;
+    margin: 0 auto;
+    max-width: 880px;
+    text-align: center;
+    width: 85%;
+}
+
+.feature {
+    padding: 2.5rem 0;
+}
+
+.feature-heading {
+    margin: 1.5rem auto .5rem;
+}
+
+
+
+.testimony {
+    background-color: hsl(219, 30%, 18%);
+}
