@@ -98,6 +98,7 @@ a:link, a:visited {
 
 .header-logo {
     align-self: middle;
+    width: auto;
 }
 
 .nav-list {
@@ -163,7 +164,7 @@ a:link, a:visited {
 
 .features {
     align-items:end;
-    margin: 0 auto;
+    margin: 7.5rem auto;
     max-width: 880px;
     text-align: center;
     width: 85%;
