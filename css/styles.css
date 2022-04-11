@@ -92,7 +92,7 @@ a:link, a:visited {
     justify-content: space-between;
     height: 1.5rem;
     width: 90%;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
     z-index: auto;
 }
 
@@ -140,7 +140,7 @@ a:link, a:visited {
 }
 
 .intro-heading {
-    margin: 1rem auto 0.5rem;
+    margin: 1rem auto 1rem;
     z-index: 2;
 }
 
