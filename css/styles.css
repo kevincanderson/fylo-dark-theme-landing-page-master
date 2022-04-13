@@ -319,6 +319,8 @@ margin-bottom: 3rem;
     margin-top: -11rem;
     padding-top: 17rem;
     width: 100%;
+    position: relative;
+    z-index: -1;
 }
 
 .footer-logo {
