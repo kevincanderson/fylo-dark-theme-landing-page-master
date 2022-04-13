@@ -299,7 +299,6 @@ margin-bottom: 3rem;
 .sign-up {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -312,6 +311,7 @@ margin-bottom: 3rem;
 .access-btn {
     padding: 1rem 0;
     border-style: none;
+    margin-top: 1.5rem;
 }
 
 .footer {
@@ -480,6 +480,8 @@ footer {
 
     .access-btn {
         padding-inline: 2rem;
+        margin-top: 0;
+        margin-left: 1.5rem;
     }
     .footer {
         position: relative;
