@@ -18,6 +18,10 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script
+			src="https://kit.fontawesome.com/882752e864.js"
+			crossorigin="anonymous"
+		></script>
 
 		<link rel="stylesheet" href="css/styles.css" />
 
@@ -45,7 +49,7 @@
 					<img src="images/logo.svg" alt="logo" class="header-logo" />
 					<nav>
 						<ul class="nav-list">
-							<a class="nav-item" href=""><li>Features</li></a>
+							<a class="nav-item" href="#features"><li>Features</li></a>
 							<a class="nav-item" href=""><li>Team</li></a>
 							<a class="nav-item" href=""><li>Sign In</li></a>
 						</ul>
@@ -68,7 +72,7 @@
 
 		<!-- ! FEATURES -->
 
-		<div class="features">
+		<div id="features" class="features">
 			<div class="card feature">
 				<img
 					src="images/icon-access-anywhere.svg"
@@ -136,16 +140,20 @@
 		<!-- ! TESTIMONIALS -->
 
 		<div class="testimonials">
-			<img src="images/bg-quotes.png" alt="" class="quotes-graphic" />
 			<div class="testimony">
+				<!-- <img src="images/bg-quotes.png" alt="quote-graphic" class="quotes" /> -->
 				<p class="testimony-content">
 					Fylo has improved our team productivity by an order of magnitude.
 					Since making the switch our team has become a well-oiled collaboration
 					machine.
 				</p>
-				<img src="images/profile-1.jpg" alt="" class="test-image" />
-				<p class="test-user">Satish Patel</p>
-				<p class="test-title">Founder & CEO, Huddle</p>
+				<div class="test-info">
+					<img src="images/profile-1.jpg" alt="" class="test-image" />
+					<div class="user-info">
+						<p class="test-user">Satish Patel</p>
+						<p class="test-title">Founder & CEO, Huddle</p>
+					</div>
+				</div>
 			</div>
 			<div class="testimony">
 				<p class="testimony-content">
@@ -153,9 +161,13 @@
 					Since making the switch our team has become a well-oiled collaboration
 					machine.
 				</p>
-				<img src="images/profile-2.jpg" alt="" class="test-image" />
-				<p class="testimony-user">Bruce McKenzie</p>
-				<p class="testimony-title">Founder & CEO, Huddle</p>
+				<div class="test-info">
+					<img src="images/profile-2.jpg" alt="" class="test-image" />
+					<div class="user-info">
+						<p class="test-user">Bruce McKenzie</p>
+						<p class="test-title">Founder & CEO, Huddle</p>
+					</div>
+				</div>
 			</div>
 			<div class="testimony">
 				<p class="testimony-content">
@@ -163,9 +175,13 @@
 					Since making the switch our team has become a well-oiled collaboration
 					machine.
 				</p>
-				<img src="images/profile-3.jpg" alt="" class="test-image" />
-				<p class="testimony-user">Iva Boyd</p>
-				<p class="testimony-title">Founder & CEO, Huddle</p>
+				<div class="test-info">
+					<img src="images/profile-3.jpg" alt="" class="test-image" />
+					<div class="user-info">
+						<p class="test-user">Iva Boyd</p>
+						<p class="test-title">Founder & CEO, Huddle</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -178,8 +194,12 @@
 				generous. If you have any questions, our support team would be happy to
 				help you.
 			</p>
-			<form action="submit">
-				<input type="email" placeholder="email@example.com" />
+			<form class="sign-up" action="submit">
+				<input
+					type="email"
+					placeholder="email@example.com"
+					class="access-input"
+				/>
 				<button class="btn access-btn">Get Started For Free</button>
 			</form>
 		</div>
@@ -187,38 +207,45 @@
 		<!-- ! FOOTER -->
 
 		<div class="footer">
-			<img src="images/logo.svg" alt="" class="footer-logo" />
-			<div class="footer-nav">
-				<table class="footer-contact">
-					<tr>
-						<td><img src="images/icon-location.svg" alt="" /></td>
-						<td>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua
-						</td>
-					</tr>
-				</table>
-				<table class="footer-contact">
-					<tr>
-						<td><img src="images/icon-phone.svg" alt="" /></td>
-						<td>+1-543-123-4567</td>
-					</tr>
-					<tr>
-						<td><img src="images/icon-email.svg" alt="" /></td>
-						<td>example@fylo.com</td>
-					</tr>
-				</table>
-				<ul class="footer-nav-links">
-					<a href="#"><li>About Us</li></a>
-					<a href="#"><li>Jobs</li></a>
-					<a href="#"><li>Press</li></a>
-					<a href="#"><li>Blog</li></a>
-				</ul>
-				<ul class="footer-nav-links">
-					<a href="#"><li>Contact Us</li></a>
-					<a href="#"><li>Terms</li></a>
-					<a href="#"><li>Privacy</li></a>
-				</ul>
+			<div class="footer-wrapper">
+				<img src="images/logo.svg" alt="" class="footer-logo" />
+				<div class="footer-nav">
+					<table class="footer-contact">
+						<tr>
+							<td><img src="images/icon-location.svg" alt="" /></td>
+							<td>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua
+							</td>
+						</tr>
+					</table>
+					<table class="footer-contact">
+						<tr>
+							<td><img src="images/icon-phone.svg" alt="" /></td>
+							<td>+1-543-123-4567</td>
+						</tr>
+						<tr>
+							<td><img src="images/icon-email.svg" alt="" /></td>
+							<td>example@fylo.com</td>
+						</tr>
+					</table>
+					<ul class="footer-nav-links">
+						<a href="#"><li>About Us</li></a>
+						<a href="#"><li>Jobs</li></a>
+						<a href="#"><li>Press</li></a>
+						<a href="#"><li>Blog</li></a>
+					</ul>
+					<ul class="footer-nav-links">
+						<a href="#"><li>Contact Us</li></a>
+						<a href="#"><li>Terms</li></a>
+						<a href="#"><li>Privacy</li></a>
+					</ul>
+					<div class="social-links">
+						<a href="#"><i class="fa-brands fa-facebook"></i></a>
+						<a href="#"><i class="fa-brands fa-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					</div>
+				</div>
 			</div>
 		</div>
 
