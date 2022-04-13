@@ -171,6 +171,7 @@ a:link, a:visited {
     max-width: 880px;
     text-align: center;
     width: 85%;
+
 }
 
 .feature {
@@ -217,7 +218,7 @@ margin-bottom: 3rem;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     margin-top: 10rem;
-    
+    max-width: 1160px;
 }
 
 
@@ -288,14 +289,12 @@ margin-bottom: 3rem;
     padding: 2.5rem 1.75rem;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
     border-radius: 9px;
-    position: relative;
+    max-width: 8633px;
 }
 
 .early-access > h2 {
     margin-bottom: 1rem;
 }
-
-
 
 .sign-up {
     display: flex;
@@ -319,21 +318,19 @@ margin-bottom: 3rem;
     background-color: var(--footer-bg);
     margin-top: -11rem;
     padding-top: 17rem;
-    max-width: 1280px;
-}
-
-.footer-wrapper {
-    height: 100%;
+    width: 100%;
 }
 
 .footer-logo {
     width: 108px;
     height: 31px;
-    margin-left: 2.5rem;
+    margin: 0 0 2rem 2rem;
 }
 
+
 .footer-nav {
-    margin: 1rem 0.75rem 0;
+    margin: 0 0.75rem 0;
+ 
 }
 
 .footer-contact {
@@ -373,4 +370,129 @@ margin-bottom: 3rem;
 
 footer {
     display: none;
+}
+
+@media screen and (min-width: 767px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-bar {
+        height: 3.25rem;
+        margin: 2rem auto;
+    }
+
+    .header-logo {
+        width: 11rem;
+    }
+
+    .nav-item {
+        margin-left: 3.5rem;
+    }
+
+    .btn {
+        padding: 1.25rem 6rem;
+        border-radius: 1.75rem;
+    }
+    
+    .intro-content::after {
+        position: absolute;
+        content: "";
+        height: 119%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(../images/bg-curvy-desktop.svg);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: var(--intro-bg);
+    }
+    
+    .intro-text {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        margin-inline: 3rem;
+    }
+
+    .features {
+        display: grid;
+        grid-template-areas: "feature feature"
+        "feature feature";
+        justify-items: center;
+        column-gap: 7rem;
+        row-gap: 3rem;
+    }
+
+    .productive {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .productive-content {
+        margin: 0 5rem;
+    }
+
+    .productive-heading {
+        font-size: 2.5rem;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        margin: 5rem auto;
+    }
+
+    .testimony {
+        margin-inline: 1.25rem;
+    }
+
+    .testimony-content {
+        font-size: 0.875rem;
+    }
+
+
+    .early-access {
+        max-width: 863px;
+    }
+
+    .early-access-heading {
+        font-size: 2rem;
+    }
+
+    .early-access > p {
+        margin-inline: 5rem;
+    }
+
+    .sign-up {
+        flex-direction: row;
+        margin-inline: 2rem;
+    }
+    .access-input {
+        flex: 2 2 0;
+        border-radius: 1.75rem;
+    }
+
+    .access-btn {
+        padding-inline: 2rem;
+    }
+    .footer {
+        position: relative;
+        margin-top: -7rem;
+        z-index: -1;
+    }
+    .footer-nav > * {
+        display: inline-block;
+        margin-top: 0;
+        vertical-align: top;
+    }
+    .footer-contact:first-of-type {
+        max-width: 33%;
+    }
+
+    
+
 }
