@@ -70,6 +70,8 @@ a:link, a:visited {
     color: var(--white);
 }
 
+
+
 .btn {
     background: linear-gradient(to right, var(--cyan), var(--blue));
     border-radius: 1.5rem;
@@ -77,9 +79,12 @@ a:link, a:visited {
     border-style: none;
     color: var(--white);
     font-weight: 700;
+    cursor:pointer;
 }
 
-
+.btn:hover {
+    background: var(--cyan);
+}
 
 .intro {
     /* background-color: var(--intro-bg); */
@@ -187,6 +192,7 @@ a:link, a:visited {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    max-width: 1250px;
 }
 
 .productive-graphic {
@@ -208,10 +214,23 @@ margin-bottom: 3rem;
     color: hsl(176, 68%, 64%)
 }
 
+.productive-link:hover {
+    color: var(--white);
+    border-bottom-color: var(--white);
+}
+
+.productive-link:hover .circle {
+    color: var(--white);
+    border-bottom-color: var(--white);
+    fill: currentColor;
+}
+
 .arrow {
     height: 0.75rem;
     vertical-align: middle;
 }
+
+
 
 .testimonials {
     position: relative;
@@ -229,19 +248,19 @@ margin-bottom: 3rem;
     padding: 1.5rem 1.25rem;
     margin: .75rem 3rem;
     z-index: 2;
+
 }
 
-.testimony:first-of-type::before {
-    content: url(../images/bg-quotes.png);
-    height: 1.5rem;
+.quotes {
     position: absolute;
-    top: -18px;
+    z-index: -1;
+    width: 1.5rem;
+    top: 0;
     bottom: 0;
-    left: 5px;
+    left: 14%;
     right: 0;
-    z-index: 1;
-}
 
+}
 .testimony-content {
     font-size: 0.625rem;
     line-height: 1.125rem;
@@ -300,13 +319,28 @@ margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+    position: relative;
 }
 
 .access-input {
-    padding: 1rem 0 1rem 1.5rem;
+    padding: 1rem 0 1rem 1.75rem;
     box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
     border-radius: 24px;
     border-style: none;
+}
+
+.access-input:focus {
+    outline: none; 
+}
+
+#invalid-email {
+    visibility: hidden;
+    position: absolute;
+    color: red;
+    font-weight: 700;
+    font-size: .625rem;
+    top: 3.25rem;
+    left: 2rem;
 }
 .access-btn {
     padding: 1rem 0;
@@ -375,6 +409,11 @@ footer {
 }
 
 @media screen and (min-width: 767px) {
+
+    .footer-nav-links:hover, .nav-items:hover {
+        font-weight: 700;
+        cursor: pointer;
+    }
 
     h1 {
         font-size: 2.5rem;
@@ -448,12 +487,27 @@ footer {
         margin: 5rem auto;
     }
 
+    .quotes {
+        position: absolute;
+        z-index: -1;
+        width: 3rem;
+        top: -9%;
+        bottom: 0;
+        left: 1%;
+        right: 0;
+    
+    }
+
     .testimony {
         margin-inline: 1.25rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-inline: 1.5rem;
     }
 
     .testimony-content {
         font-size: 0.875rem;
+        line-height: 1.3125rem;
     }
 
 
@@ -472,10 +526,18 @@ footer {
     .sign-up {
         flex-direction: row;
         margin-inline: 2rem;
+        margin-bottom: 0.5rem;
     }
     .access-input {
         flex: 2 2 0;
         border-radius: 1.75rem;
+    }
+
+    #invalid-email {  
+        font-weight: 700;
+        font-size: .625rem;
+        top: 4rem;
+        left: 1.75rem;
     }
 
     .access-btn {
@@ -488,6 +550,11 @@ footer {
         margin-top: -7rem;
         z-index: -1;
     }
+
+    .footer a {
+        cursor: pointer;
+    }
+
     .footer-nav > * {
         display: inline-block;
         margin-top: 0;

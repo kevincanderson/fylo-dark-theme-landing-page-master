@@ -132,16 +132,16 @@
 
 				<a class="productive-link" href=""
 					>See how Fylo works
-					<img src="images/icon-arrow.svg" alt="" class="arrow"
-				/></a>
+					<img src="images/icon-arrow.svg" alt="" class="arrow" />
+				</a>
 			</div>
 		</div>
 
 		<!-- ! TESTIMONIALS -->
 
 		<div class="testimonials">
+			<img src="images/bg-quotes.png" alt="quote-graphic" class="quotes" />
 			<div class="testimony">
-				<!-- <img src="images/bg-quotes.png" alt="quote-graphic" class="quotes" /> -->
 				<p class="testimony-content">
 					Fylo has improved our team productivity by an order of magnitude.
 					Since making the switch our team has become a well-oiled collaboration
@@ -194,12 +194,14 @@
 				generous. If you have any questions, our support team would be happy to
 				help you.
 			</p>
-			<form class="sign-up" action="submit">
+			<form class="sign-up" action="">
 				<input
 					type="email"
 					placeholder="email@example.com"
 					class="access-input"
+					id="email"
 				/>
+				<span id="invalid-email">Error, please check your email</span>
 				<button class="btn access-btn">Get Started For Free</button>
 			</form>
 		</div>
@@ -257,5 +259,6 @@
 				>. Coded by <a href="#">Your Name Here</a>.
 			</p>
 		</footer>
+		<script src="js/main.js"></script>
 	</body>
 </html>
