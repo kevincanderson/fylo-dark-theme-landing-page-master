@@ -425,7 +425,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
 
-    .footer-nav-links > a:hover, .nav-item:hover {
+    .footer-nav-links > li:hover, .nav-item:hover {
         font-weight: 700;
         cursor: pointer;
     }
