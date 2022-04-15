@@ -1,92 +1,128 @@
-# Frontend Mentor - Fylo dark theme landing page
+# Frontend Mentor - Fylo dark theme landing page solution
 
-![Design preview for the Fylo dark theme landing page challenge](./design/desktop-preview.jpg)
+This is a solution to the [Fylo dark theme landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to: 
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./images/smartmockups_l1zweyfb.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [https://github.com/LemonStain/fylo-dark-theme-landing-page-master](https://github.com/LemonStain/fylo-dark-theme-landing-page-master)
+- Live Site URL: [https://vigilant-cori-c786d2.netlify.app/](https://vigilant-cori-c786d2.netlify.app/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I learned how to use SVGs with more complex styling and did more with Flex and Grid to play with layouts. I actually ended up restarted this project to clean up class names and HTML layouts.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Also, my first time using CSS variables.
 
-## Deploying your project
+To see how you can add code snippets, see below:
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```html
+<form class="sign-up" action="">
+	<input
+		type="email"
+		placeholder="email@example.com"
+		class="access-input"
+		id="email"
+	/>
+	<span id="invalid-email">Error, please check your email</span>
+	<button class="btn access-btn">Get Started For Free</button>
+</form>
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```css
+.productive-link:hover {
+	color: var(--white);
+	border-bottom-color: var(--white);
+	fill: currentColor;
+}
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+.productive-link:hover > svg use {
+	fill: white;
+}
 
-## Create a custom `README.md`
+.productive-link > svg {
+	vertical-align: middle;
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+.arrow {
+	height: 0.75rem;
+	width: 0.75rem;
+}
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+.arrow-fill:hover {
+	fill: white;
+}
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```js
+function myFunction() {
+	const email = document.getElementById("email");
 
-## Submitting your solution
+	email.addEventListener("keyup", function (event) {
+		isValidEmail = email.checkValidity();
+		console.log(isValidEmail);
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+		if (isValidEmail) {
+			document.getElementById("invalid-email").style.visibility = "hidden";
+		} else {
+			document.getElementById("invalid-email").style.visibility = "visible";
+		}
+	});
+}
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+myFunction();
+```
 
-## Sharing your solution
+### Continued development
 
-There are multiple places you can share your solution:
+I want to continue to simplify my HTML layouts and class names so my CSS gets easier to navigate and style.
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+### Useful resources
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+- [SVG CSS Color](https://css-tricks.com/change-color-of-svg-on-hover/) - This helped me to learn to color SVGs on Hover. Tip: Use SVG instead of IMG.
+- [CheckValidity](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity) - This assisted me with my validation errors.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+## Author
 
-## Got feedback for us?
+- Website - [Add your name here](https://www.kevincanderson.dev)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/lemonstain)
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+## Acknowledgments
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+Thanks to the FrontendMentor Slack group who gave me guidance where needed.
