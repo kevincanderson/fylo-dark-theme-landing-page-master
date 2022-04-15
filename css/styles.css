@@ -219,16 +219,29 @@ margin-bottom: 3rem;
     border-bottom-color: var(--white);
 }
 
-.productive-link:hover .circle {
+.productive-link:hover {
     color: var(--white);
     border-bottom-color: var(--white);
     fill: currentColor;
 }
 
-.arrow {
-    height: 0.75rem;
+.productive-link:hover > svg use {
+    fill: white;
+}
+
+.productive-link > svg {
     vertical-align: middle;
 }
+
+.arrow {
+    height: .75rem;
+    width: .75rem;
+} 
+
+.arrow-fill:hover {
+    fill: white;
+}
+
 
 
 
@@ -309,6 +322,8 @@ margin-bottom: 3rem;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
     border-radius: 9px;
     max-width: 8633px;
+    z-index: 2;
+    position: relative;
 }
 
 .early-access > h2 {
@@ -353,8 +368,8 @@ margin-bottom: 3rem;
     margin-top: -11rem;
     padding-top: 17rem;
     width: 100%;
-    position: relative;
-    z-index: -1;
+    /* position: relative; */
+    z-index: 1;
 }
 
 .footer-logo {
@@ -408,11 +423,15 @@ footer {
     display: none;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1024px) {
 
-    .footer-nav-links:hover, .nav-items:hover {
+    .footer-nav-links > a:hover, .nav-item:hover {
         font-weight: 700;
         cursor: pointer;
+    }
+
+    .social-links > a:hover {
+        color: var(--cyan);
     }
 
     h1 {
@@ -546,22 +565,58 @@ footer {
         margin-left: 1.5rem;
     }
     .footer {
-        position: relative;
+        
         margin-top: -7rem;
         z-index: -1;
+        padding-top: 12rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-wrapper {
+        margin-left: 7rem;
+        z-index: 999;
+    }
+
+    .footer-wrapper table {
+        display: inline-block;
     }
 
     .footer a {
         cursor: pointer;
+        z-index: 999;
     }
+    .footer-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin-left: -3rem;
+}
 
     .footer-nav > * {
         display: inline-block;
         margin-top: 0;
         vertical-align: top;
+        z-index: 999;
+    }
+
+    .footer > img {
+        display: inline-block;
     }
     .footer-contact:first-of-type {
-        max-width: 33%;
+    max-width: 32%;
+    align-self: flex-start;
+
+    }
+
+    .footer-nav > * {
+        margin-right: minmax(1rem, 4rem);
+
+    }
+    
+
+    .social-links {
+        margin-top: .5rem;
     }
 
     
